@@ -1,0 +1,4 @@
+plico
+numpy
+six
+appdirs
