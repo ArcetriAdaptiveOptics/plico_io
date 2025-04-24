@@ -12,8 +12,8 @@ class Test(unittest.TestCase):
     def test_as_dict(self):
         self.ms.set_on(True)  
         got = self.ms.to_dict()
-        self.assertCountEqual(got['name'], 'pippo')
-        self.assertCountEqual(got['is_on'], True)
+        self.assertEqual(got['name'], 'pippo')
+        self.assertEqual(got['is_on'], True)
 
 
 if __name__ == "__main__":
