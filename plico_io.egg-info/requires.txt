@@ -1,4 +1,0 @@
-plico
-numpy
-six
-appdirs

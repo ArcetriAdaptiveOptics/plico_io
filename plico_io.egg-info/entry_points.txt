@@ -1,2 +1,0 @@
-[console_scripts]
-plico_io_client = plico_io.client.client:main
