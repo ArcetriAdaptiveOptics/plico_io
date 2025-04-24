@@ -1,6 +1,5 @@
 import unittest
 from plico_io.controller_types.controller_status import DriveStatus
-from plico_motor.client.snapshot_entry import SnapshotEntry
 
 
 class Test(unittest.TestCase):
