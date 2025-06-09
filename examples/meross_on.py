@@ -15,7 +15,7 @@ from plico_io.utils.builder import DriveClientBuilder
 
 def parse_arguments():
     """Parse command line arguments."""
-    parser = argparse.ArgumentParser(description='Turn off PLICO drive controller')
+    parser = argparse.ArgumentParser(description='Turn on PLICO io controller')
     parser.add_argument('--config', 
                         type=str, 
                         help='Path to configuration file',
@@ -36,7 +36,7 @@ def parse_arguments():
 
 
 def main():
-    """Main function to turn off the controller."""
+    """Main function to turn on the controller."""
     args = parse_arguments()
     
     # Get configuration file
@@ -78,17 +78,17 @@ def main():
         # Turn on the device
         print("Turning on the device...")
         result = client.turn_on()
-        print(f"Turn off result: {result}")
+        print(f"Turn on result: {result}")
         
         # Wait a moment to let the command process
         time.sleep(1)
         
-        # Check status after turning off
+        # Check status after turning on
         print("Getting updated status...")
         status = client.get_status()
         print(f"Updated status: {status}")
         
-        print("\nDevice turned off successfully!")
+        print("\nDevice turned on successfully!")
         
     except Exception as e:
         print(f"Error: {str(e)}")

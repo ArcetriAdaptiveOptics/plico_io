@@ -1,0 +1,5 @@
+plico
+numpy
+six
+appdirs
+pyvisa>=1.11

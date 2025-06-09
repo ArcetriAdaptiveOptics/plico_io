@@ -19,6 +19,7 @@ setup(
     entry_points={
         'console_scripts': [
             'plico_io_client=plico_io.client.client:main',
+            'plico_tektronix_afg_client_example=plico_io.examples.tektronix_afg_client_example:main',
         ],
     },
 ) 
