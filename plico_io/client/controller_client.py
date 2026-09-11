@@ -60,7 +60,8 @@ class ControllerClient(AbstractControllerClient):
             True if successful, False otherwise
         """
         self._logger.notice(f"Turning on device {device_id}, channel {channel}")
-        return self._rpc.sendRequest(self._requestSocket, 'turnOn', timeout=timeout_in_sec)
+        return self._rpc.sendRequest(self._requestSocket, 'turnOn',
+                                     args=(channel,), timeout=timeout_in_sec)
         
     def turn_off(self, device_id=None, channel=0, timeout_in_sec=Timeout.SETTER):
         """Turn off a device.
@@ -80,7 +81,8 @@ class ControllerClient(AbstractControllerClient):
             True if successful, False otherwise
         """
         self._logger.notice(f"Turning off device {device_id}, channel {channel}")
-        return self._rpc.sendRequest(self._requestSocket, 'turnOff', timeout=timeout_in_sec)
+        return self._rpc.sendRequest(self._requestSocket, 'turnOff',
+                                     args=(channel,), timeout=timeout_in_sec)
         
     def get_status(self, device_id=None, channel=0, timeout_in_sec=Timeout.GETTER):
         """Get the status of a device.
